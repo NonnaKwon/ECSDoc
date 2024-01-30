@@ -10,7 +10,10 @@
 
 
 
-
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 
@@ -21,13 +24,15 @@
 ECS은 객체지향이 아닌 <span style="background-color:#fff5b1">데이터 지향 기술 스택(DOTS)</span>으로 설계된 시스템이다.
 여기서 E, C, S는 해당 시스템을 구성하는 요소라고 볼 수 있다.
 
-
+<br/>
+<br/>
 
 ### (1) Component
 데이터 집합을 말한다. 
 예를들어 Position 컴포넌트는 x 좌표, y좌표, z좌표의 '위치'데이터만 가질 것이다.
 
-
+<br/>
+<br/>
 
 
 ### (2) Entity
@@ -35,20 +40,21 @@ ECS은 객체지향이 아닌 <span style="background-color:#fff5b1">데이터 �
 예를들어 큐브 엔티티는 Position, Rotation 컴포넌트를 가질 수 있을 것이다.
 
 
-
+<br/>
+<br/>
 
 
 ### (3) System
 객체지향에서의 메소드의 개념이다. 
 예를들어 moveSystem은 Position, Rotation 컴포넌트를 가진 엔티티들을 대상으로 키 입력시 Position 데이터를 변경할 것이다.
 
-
-
+<br/>
+<br/>
 
 ![image](https://github.com/NonnaKwon/ECSDoc/assets/89887999/66c509b0-a258-4515-8742-be10bbd2432d)
 
-
-
+<br/>
+<br/>
 
 OOP에서는 행위와 상태를 같은 엔티티가 가지고 있었던것과 다르게, ECS에서의 엔티티는 단순히 데이터를 가리키는 인덱스일 뿐이다. 행위는 시스템이 결정한다.
 
@@ -59,10 +65,10 @@ OOP에서는 행위와 상태를 같은 엔티티가 가지고 있었던것과 �
 
 
 
-
-
-
-
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 
@@ -71,28 +77,29 @@ OOP에서는 행위와 상태를 같은 엔티티가 가지고 있었던것과 �
 
 ECS에서의 컴포넌트의 저장 방식은 두 가지가 있다. 하나는 컴포넌트별로 묶어서 배열로 만든 방식인 **Sparse Set 방식**, 또 하나는 같은 컴포넌트 조합별로 묶은 방식인 **Archetype 방식**이다.
 
-
-
+<br/>
+<br/>
 
 ## (1) Sparse Set
 ![image](https://github.com/NonnaKwon/ECSDoc/assets/89887999/195169a2-11fb-4452-ac64-036bc3fabfe4)
 
 
-
+<br/>
 Sparse Set 방식은 컴포넌트 배열을 만들어 거기에 해당 id 엔티티의 데이터값을 저장한다.
 이렇게 하면 아무리 많은 엔티티가 있더라도 for loop만 돌면 작동을 한다.
 
+<br/>
+![image](https://github.com/NonnaKwon/ECSDoc/assets/89887999/303eef1a-506b-4cbe-98de-ce935005435b)
 
-![image](https://github.com/NonnaKwon/ECSDoc/assets/89887999/f8f78cbe-97a1-4a53-97cd-f64eddd85486)
 
-
+<br/>
 
 이렇게 하면 편하지만 문제는 데이터가 낭비되고 캐시 적중률이 낮다는 문제가 있다.
 
 
-
-
-
+<br/>
+<br/>
+<br/>
 
 
 
